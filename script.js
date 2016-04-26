@@ -5,12 +5,13 @@ document.addEventListener("DOMContentLoaded",function(){
 			return{				
 				first:"",
 				second:"",
-				result:0
+				result:0,
+				results_array:[]
 			}
 		},
 		methods:{			
 			plus:function(){
-					this.result=parseInt(this.first)+parseInt(this.second);
+					this.result=parseInt(this.first)+parseInt(this.second);					
 			},
 			minus:function(){
 					this.result=parseInt(this.first)-parseInt(this.second);
