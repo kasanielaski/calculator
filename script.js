@@ -1,27 +1,28 @@
-document.addEventListener("DOMContentLoaded",function(){
+/* eslint no-new:0 */
+/* global document, Vue */
+document.addEventListener('DOMContentLoaded', () => {
 	new Vue({
-		el:'#calc',
-		data: function(){
-			return{				
-				first:"",
-				second:"",
-				result:0
-			}
+		el: '#calc',
+		data() {
+			return {
+				first: '',
+				second: '',
+				result: 0
+			};
 		},
-		methods:{			
-			plus:function(){
-					this.result=parseInt(this.first)+parseInt(this.second);
+		methods: {
+			plus() {
+				this.result = parseInt(this.first, 10) + parseInt(this.second, 10);
 			},
-			minus:function(){
-					this.result=parseInt(this.first)-parseInt(this.second);
+			minus() {
+				this.result = parseInt(this.first, 10) - parseInt(this.second, 10);
 			},
-			multiply:function(){
-					this.result=parseInt(this.first)*parseInt(this.second);
+			multiply() {
+				this.result = parseInt(this.first, 10) * parseInt(this.second, 10);
 			},
-			division:function(){
-					this.result=parseInt(this.first)/parseInt(this.second);
+			division() {
+				this.result = parseInt(this.first, 10) / parseInt(this.second, 10);
 			}
-		},
-
+		}
 	});
-})	
+});
